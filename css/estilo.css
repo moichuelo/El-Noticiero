@@ -1,0 +1,55 @@
+.capa {
+  background-color: white;
+}
+.capa h1 {
+  color: blue;
+}
+.capa p {
+  color: coral;
+}
+
+body {
+  background-color: rgb(26, 110, 29);
+}
+
+p {
+  color: red;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+h1 {
+  background-color: rgb(12, 26, 13);
+}
+
+.parrafo {
+  text-decoration: underline;
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 25px;
+  margin: 15px;
+}
+
+.botones, .button-enviar, .button-cancelar {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+.botones:hover, .button-enviar:hover, .button-cancelar:hover {
+  background-color: rgb(126, 37, 193);
+}
+.botones:active, .button-enviar:active, .button-cancelar:active {
+  background-color: rgb(255, 230, 0);
+}
+
+.button-cancelar {
+  background-color: red;
+}
+
+.button-enviar {
+  background-color: green;
+  color: white;
+}
+
+/*# sourceMappingURL=estilo.css.map */

@@ -1,0 +1,100 @@
+#mario {
+    position: relative; /* sigue el flujo normal de posicionamiento*/
+    width: 250px;
+    transition: all 0.3s ease;
+}
+
+#mario img:first-child {
+    box-shadow: 0 60px 60px -60x rgba(0, 30, 255, 0.5);
+    border-radius: 4px;
+    object-fit: cover; /*ajustar imagen al tamaño*/
+    width: 100%; /*ocupe el 100%*/
+}
+
+#mario img:last-child {
+    position: absolute; /*sale del flujo y se coloca en el mismo lugar que una posición relativa anterior o al principio de la página*/
+    width: 120px;
+    bottom: 0; /*ajustamos la posicion*/
+    left: 0;
+    right: 0;
+    margin: auto; /*centramos*/
+    transform: translateY(25%); /*lo movemos abajo*/
+    transition: 0.3s ease; /*transición*/
+    opacity: 0; /*lo ocultamos*/
+}
+
+#mario:hover {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0); /*cambiamos perspectiva y rotamos*/
+}
+
+#mario::before {
+    /*pseudo elemento para insertar contenido antes del real*/
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(
+        /* degradado lineal de transparente a negro*/ to bottom,
+        transparent 10%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0) 95%
+    );
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+#mario:hover::before {
+    opacity: 1;
+}
+
+#mario:hover img:last-child {
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+#key {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    position: relative;
+    animation: movimiento 5s ease 2s 2 alternate; /* nombre  tiempo de animación  repeticiones*/
+    /* animation-delay: 2s; retraso */
+    animation-fill-mode: both; /* both - ambas     forwards - último fotograma    backwards - primer fotograma*/
+    /* animation-timing-function: ease; */
+    /* animation-direction: alternate; */
+}
+
+/* @keyframes movimiento {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 100px;
+    }
+} */
+
+@keyframes movimiento {
+    0% {
+        top: 0px;
+        left: -300px;
+        background-color: rgb(42, 165, 42);
+    }
+    25% {
+        top: 100px;
+        background-color: blueviolet;
+    }
+    50% {
+        top: 50px;
+        background-color: rgb(43, 73, 226);
+    }
+    85% {
+        top: 100px;
+        background-color: rgb(226, 177, 43);
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        background-color: rgb(7, 246, 3);
+    }
+}

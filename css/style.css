@@ -1,0 +1,250 @@
+@import url("mario.css"); /* css de la animación de Mario*/
+@import url("estilo.css");
+
+:root {
+    --cfondo: rgb(26, 110, 29);
+    --borde: 2px solid rgb(12, 26, 13);
+}
+
+header,
+section,
+footer {
+    margin: 0 10%;
+}
+
+/* ----------------------------------------------------------------HEADER ------------------------------------------------- */
+nav a {
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+    padding: 10px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 20px;
+}
+
+nav a:hover {
+    /* Estilo para el enlace al pasar el mouse */
+    color: var(--cfondo);
+}
+
+/* nav a:link { */
+/* Estilo para el enlace cuando no ha sido visitado */
+/* color: royalblue; */
+/* } */
+
+/* nav a:visited { */
+/* Estilo para el enlace cuando ha sido visitado */
+/* color: rgb(227, 5, 5); */
+/* } */
+
+nav a:active {
+    /* Estilo para el enlace cuando se encuentra activo */
+    color: rgb(227, 5, 5);
+}
+
+nav a:focus {
+    /* Estilo para el enlace cuando se encuentra enfocado */
+    color: rgb(38, 5, 227);
+}
+
+/* div:first-child { /* Afecta al primer elemento */ /*
+    color: saddlebrown;
+} */
+
+nav {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgb(237, 237, 237);
+}
+
+/* ----------------------------------------------------------------BANNER------------------------------------------------- */
+#banner {
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 7em;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos en el eje horizontal */
+    justify-content: center; /* Centra los elementos en el eje vertical */
+}
+
+#banner p {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(27, 27, 27);
+    padding: 10px;
+    text-align: center;
+    font-size: 50px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+/* ----------------------------------------------------------------CENTRAL ------------------------------------------------- */
+#central {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#info1,
+#info2 {
+    background-color: rgb(237, 237, 237);
+
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#info1 {
+    border-radius: 10px 0 0 10px;
+}
+
+#info2 {
+    border-radius: 0 10px 10px 0;
+}
+
+#central img {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.imgcardh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info1 p,
+#info1 h3,
+#info2 h3,
+#info2 p {
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------INFO3 ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
+#info3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.cardv img {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+}
+
+.cardv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(237, 237, 237);
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border: var(--borde);
+}
+
+.cardv h3 {
+    padding: 10px;
+    text-align: center;
+}
+
+.cardh {
+    display: grid;
+    grid-template-columns: 2fr 3fr; /* Crea dos columnas de igual tamaño */
+}
+
+.cardh img {
+    width: 100%;
+}
+
+/* ----------------------------------------------------------------FOOTER ------------------------------------------------- */
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: seagreen;
+    margin-top: 10px;
+}
+
+#pie1,
+#pie2,
+#pie3 {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos en el eje horizontal */
+    justify-content: center; /* Centra los elementos en el eje vertical */
+    text-align: center; /* Centra el texto dentro de los elementos */
+}
+
+#pie3 img {
+    width: 50px;
+}
+
+#pie2 li {
+    list-style: none;
+}
+
+#pie2 a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/* ----------------------------------------------------------------prueba de conflictos */
+footer {
+    color: red;
+}
+
+#pie1 {
+    color: blue;
+}
+
+.verde {
+    color: green;
+}
+
+#cuadrado {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    transition: width 2s, transform 2s;
+    transition-timing-function: ease-in;
+}
+
+#cuadrado:hover {
+    background-color: red;
+    width: 400px;
+}
+
+#tarjetas {
+    display: flex;
+}
+
+.card {
+    flex: 50%;
+    margin: 10px;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+    transition: all 0.4s ease-out;
+    border-radius: 20px;
+}
+
+.card:hover {
+    box-shadow: 10px 10px 30px rgba(20, 5, 77, 0.5);
+    transform: translateY(-2%) scale(1.05);
+}
+
+.contenido {
+    flex-grow: 1; /* opcupa todo el espacio posible debe ir acompañado de flex-shrink*/
+    flex-shrink: 1; /* permite que se encoja el bloque en caso de ser necesario*/
+}
+
+.boton {
+    background-color: gray;
+    padding: 10px;
+}
