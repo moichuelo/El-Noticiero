@@ -5,11 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="../js/script.js"></script>
 </head>
 
 <body>
     <h1>título de la página</h1>
-    <p>archivo 2</p>
+
+    <p id="parrafo">Contenido del párrafo</p>
+
+    <button type="button" onclick="document.getElementById('parrafo').innerHTML = 'Nuevo contenido'">Contenido</button>
+    <button type="button" onclick="document.getElementById('parrafo').style.color = 'red'">Rojo</button>
+    <button type="button" onclick="document.getElementById('parrafo').style.color = 'black'">Negro</button>
+    <button type="button" onclick="document.getElementById('parrafo').style.fontSize = '40px'">40px</button>
+
+    <br><br>
+
+    <button type="button" onclick="document.getElementById('parrafo').style.display = 'none'">Ocultar</button>
+    <button type="button" onclick="document.getElementById('parrafo').style.display = 'block'">mostrar</button>
+
+    <br><br>
+    <button type="button" onclick="document.getElementById('imagen').src = '../img/pic_bulbon.gif'">Encender</button>
+
+    <img id="imagen" src="../img/pic_bulboff.gif" alt="">
+
+    <button type="button" onclick="document.getElementById('imagen').src = '../img/pic_bulboff.gif'">Apagar</button>
+
+    <button type="button" onmouseout="document.getElementById('parrafo').style.color = 'blue'"
+        onfocus="saludarAlUsuario()">No salgas de este botón</button>
+
+
+    <h2>título de la página</h2>
 </body>
 
 </html>

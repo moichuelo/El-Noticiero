@@ -248,3 +248,35 @@ footer {
     background-color: gray;
     padding: 10px;
 }
+
+/* Estilo del bloque contenedor */
+.container1 {
+    position: relative;
+    height: 100vh; /* Ajusta la altura según lo necesites */
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Hace que la imagen se quede fija */
+    background-repeat: no-repeat;
+}
+
+/* Estilo del contenido */
+.content1 {
+    position: relative;
+    padding: 50px; /* Ajusta el relleno según lo necesites */
+    background: rgba(
+        255,
+        255,
+        255,
+        0.7
+    ); /* Fondo transparente para que la imagen se vea */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes de media query para asegurar que la imagen no quede fija en móviles */
+@media (max-width: 768px) {
+    .container1 {
+        background-attachment: scroll; /* Desactiva el fondo fijo en pantallas pequeñas */
+    }
+}
